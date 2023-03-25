@@ -1,0 +1,8 @@
+<div class="auto-suggestion">
+    <input type="text" placeholder="Enter a month" [(ngModel)]="selectedItem" (input)="onInputChange()" />
+    <ul *ngIf="showSuggestion">
+      <li *ngFor="let suggestion of suggestionList" (click)="selectSuggestion(suggestion)">
+        {{ suggestion.description }}
+      </li>
+    </ul>
+</div>
