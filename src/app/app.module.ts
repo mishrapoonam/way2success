@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app.route';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AutoSuggestionComponent } from './auto-suggestion/auto-suggestion.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    AutoSuggestionComponent
+    AutoSuggestionComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
