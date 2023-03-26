@@ -1,0 +1,22 @@
+.items-container {
+    margin: 1rem;
+  }
+  .pagination-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    margin: 0 0.5rem;
+    cursor: pointer;
+    user-select: none;
+  }
+  li.active {
+    font-weight: bold;
+  }
