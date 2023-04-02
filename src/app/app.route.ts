@@ -4,16 +4,18 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AutoSuggestionComponent } from './auto-suggestion/auto-suggestion.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { AuthGuard } from './auth-guard.service';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'login' },
-  { path: 'login', component: LoginComponent },
   {
     path: 'dashboard',
     component: DashboardComponent,
+    canActivate: [AuthGuard],
   },
   { path: 'auto-suggestion', component: AutoSuggestionComponent },
   { path: 'pagination', component: PaginationComponent },
+  { path: 'login', component: LoginComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'login' },
 ];
 
 @NgModule({
